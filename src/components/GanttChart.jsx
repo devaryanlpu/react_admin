@@ -37,7 +37,7 @@ export default function GanttChart() {
         </Grid>
       </Grid>
       <Grid container spacing={3}>
-        <Grid item xs={4}>
+        <Grid item lg={4} xs={12}>
           <Autocomplete
             multiple
             id="equipment-autocomplete"
@@ -63,7 +63,7 @@ export default function GanttChart() {
             )}
           />
         </Grid>
-        <Grid item xs={4}>
+        <Grid item lg={4} xs={12}>
           <Autocomplete
             multiple
             id="pasteurizer-autocomplete"
@@ -89,7 +89,7 @@ export default function GanttChart() {
             )}
           />
         </Grid>
-        <Grid item xs={4}>
+        <Grid item lg={4} xs={12}>
           <FormGroup row>
             <FormControlLabel
               control={<Checkbox checked={checked} onChange={handleChange} name="blocks" />}

@@ -12,8 +12,8 @@ export const useStyles = makeStyles((theme) => ({
         //     easing: theme.transitions.easing.sharp,
         //     duration: theme.transitions.duration.leavingScreen,
         // }),
-        color: "#000",
-        backgroundColor: "#fff",
+        color: "#fff",
+        backgroundColor: "#012269",
     },
     appBarShift: {
         marginLeft: drawerWidth,
@@ -125,5 +125,8 @@ export const useStyles = makeStyles((theme) => ({
     },
     textPrimary: {
         color: theme.palette.primary.main
+    },
+    image: {
+        height: "25px"
     }
 }));

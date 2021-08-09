@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import KeyboardArrowRightOutlinedIcon from '@material-ui/icons/KeyboardArrowRightOutlined';
 import ScheduleOutlinedIcon from '@material-ui/icons/ScheduleOutlined';
 import TuneOutlinedIcon from '@material-ui/icons/TuneOutlined';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import {
   Drawer,
   AppBar,
@@ -12,7 +13,8 @@ import {
   Typography,
   Divider,
   Grid,
-  Button
+  Button,
+  IconButton
 } from "@material-ui/core/";
 
 
@@ -34,10 +36,7 @@ export default function MiniDrawer() {
         position="fixed"
         className={clsx(classes.appBar)}>
         <Toolbar>
-          <Grid container>
-            <Grid item component={Link} to="/">
-              <img className={classes.image} src={"/images/logo.jpeg"} alt="logo" />
-            </Grid>
+          <Grid item lg={6} xs={3} style={{display: "flex"}}>
             <Grid item component={Link} to="/" style={{textDecoration: "none", color: "unset"}}>
               <Typography
                 variant="h5"
@@ -45,6 +44,9 @@ export default function MiniDrawer() {
                 style={{ margin: "0 10px" }}>
                 Scheduling Production Planner
               </Typography>
+            </Grid>
+            <Grid item component={Link} to="/">
+              <img className={classes.image} src={"/images/logo.svg"} alt="logo" />
             </Grid>
           </Grid>
           <Grid container justifyContent="flex-end" spacing={2}>
@@ -57,9 +59,13 @@ export default function MiniDrawer() {
                 to="/scheduling/overview"
                 style={{ textTransform: "none" }}
                 size="small"
+                className="on-large-screen"
                 >
                 Production Scheduling
               </Button>
+              <IconButton aria-label="production" color="primary" className="on-small-screen">
+                <ScheduleOutlinedIcon />
+              </IconButton>
             </Grid>
             <Grid item>
               <Button 
@@ -70,12 +76,16 @@ export default function MiniDrawer() {
                 to="/configuration"
                 style={{ textTransform: "none" }}
                 size="small"
+                className="on-large-screen"
                 >
                 Configuration
                 
               </Button>
+              <IconButton aria-label="configuration" color="primary" className="on-small-screen">
+                <TuneOutlinedIcon />
+              </IconButton>
             </Grid>
-            <Divider className={classes.divider} orientation="vertical" />
+            <Divider className={classes.divider} className="on-small-screen" orientation="vertical" />
             <Grid item>
               <Button 
                 variant="contained" 
@@ -83,9 +93,13 @@ export default function MiniDrawer() {
                 endIcon={<KeyboardArrowRightOutlinedIcon/>}
                 style={{ textTransform: "none" }}
                 size="small"
+                className="on-large-screen"
                 >
                 Logout
               </Button>
+              <IconButton aria-label="configuration" color="primary" className="on-small-screen">
+                <ExitToAppIcon />
+              </IconButton>
             </Grid>
           </Grid>
         </Toolbar>
@@ -125,7 +139,7 @@ export default function MiniDrawer() {
       </main>
 
       {/* Footer */}
-      <div style={{ bottom: 0, position: "fixed", width: "100%", background: "#FFF" }}>
+      <div style={{ bottom: 0, position: "fixed", width: "100%", background: "#fff" }}>
         <Divider />
         <Footer />
       </div>

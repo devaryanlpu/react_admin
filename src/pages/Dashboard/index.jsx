@@ -27,7 +27,7 @@ const allTabs = ['/scheduling/overview',
             (allTabs.includes(location.pathname))?(<Fragment>
               <Paper square>
                 <Grid container spacing={2}>
-                  <Grid item xs={7} style={{padding: "0 8px"}}>
+                  <Grid item lg={7} xs={12} style={{padding: "0 8px"}}>
                     <Tabs value={location.pathname} 
                       indicatorColor="primary"
                       textColor="primary">
@@ -60,10 +60,10 @@ const allTabs = ['/scheduling/overview',
                       />
                     </Tabs>
                   </Grid>
-                  <Grid item xs={5} container justifyContent="flex-end" spacing={2} style={{padding: "0 8px",display:"flex", alignItems: "center"}}>
+                  <Grid item lg={5} xs={12} container justifyContent="flex-end" spacing={2} style={{padding: "0 8px",display:"flex", alignItems: "center"}}>
                       <Grid item style={{display:"flex", alignItems: "center"}}>
-                        <ArrowUpwardOutlinedIcon color="primary"/>
-                        <Typography paragraph color="primary" style={{marginBottom: 0}}>0.5% (0 hours 1 min)</Typography>
+                        <ArrowUpwardOutlinedIcon className={classes.textSucess} />
+                        <Typography paragraph className={classes.textSucess} style={{marginBottom: 0}}>0.5% (0 hours 1 min)</Typography>
                       </Grid>
                       <Grid item>
                         <IconButton aria-label="save">

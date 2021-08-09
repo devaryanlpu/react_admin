@@ -16,6 +16,7 @@ body > #root > div {
 input[type="file"] {
   display: none;
 }
+
 .custom-file-upload {
   border: 1px solid #ccc;
   display: flex;
@@ -27,6 +28,10 @@ input[type="file"] {
   align-items: center;
 }
 
+.on-small-screen {
+  display: none!important;
+}
+
 .file-preview {
 margin: 0 10px;
 }
@@ -35,7 +40,9 @@ margin: 0 10px;
 and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation : portrait) {
- 
+  .company_name {
+    display: none;
+  }
 }
 
 /* iPads (landscape) ----------- */
@@ -43,14 +50,32 @@ and (orientation : portrait) {
 and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation : landscape) {
- 
+  .company_name {
+    display: none;
+  }
 }
 
 /* Mobile Device ---------------------*/
 @media screen and (max-width:767px) {
- 
+  .company_name {
+    display: none;
+  }
+  .on-small-screen {
+    display: inline-flex!important;
+  }
+  .on-large-screen {
+    display: none!important;
+  }
 }
 
 @media screen and (min-width:320px) and (max-width:950px) and (orientation:landscape) {
- 
+  .company_name {
+    display: none;
+  }
+  .on-small-screen {
+    display: inline-flex!important;
+  }
+  .on-large-screen {
+    display: none!important;
+  }
 }

@@ -51,7 +51,7 @@ export default function Overview() {
         </Grid>
       </Grid>
       <Grid container spacing={3}>
-        <Grid item xs={4}>
+        <Grid item lg={4} xs={12}>
           <Card>
             <CardHeader
               avatar={
@@ -88,7 +88,7 @@ export default function Overview() {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item lg={4} xs={12}>
           <Card>
             <CardHeader
               avatar={
@@ -123,7 +123,7 @@ export default function Overview() {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item lg={4} xs={12}>
         <Card>
           <CardHeader
             avatar={

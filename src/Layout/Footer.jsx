@@ -7,7 +7,7 @@ export default function Footer() {
       <Grid container justifyContent="flex-end" alignItems="center">
         <Grid item style={{display:"flex", alignItems: "center", padding: "10px"}}>
           <small>Scheduling Production Planner</small>
-          <img src={"/images/logo.jpeg"} alt="logo" style={{width:"40px"}} />
+          <img src={"/images/logo.svg"} alt="logo" style={{height:"20px"}} />
         </Grid>
       </Grid>
     </div>
